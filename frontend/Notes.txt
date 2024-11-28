@@ -1,0 +1,24 @@
+Medium-Frontend
+
+1. npm create vite@latest
+2. configure and install tailwindcss
+3. for enabling html custom styles by preflight : false it costs the full page style as tailwind confuse to give div elemnt a full page dimension they think body have that access on disabling preflight of tailwindcss.
+4. install medium-common npm package. -npm i @pndevs/medium-common
+5. npm run dev
+6. npm i react-router-dom use it set Routing and file structure pagess components
+7. https://www.compart.com/en/unicode/U+1D412 unicode for styling title tag
+8. onChange={(e)=>{
+                    setBlogInputs(c=>{
+                        ...c,
+                        name:e.target.value
+                    })
+                }}
+
+9. spread the object c inside the state function and update value of key name with e.target.value
+10. type==signup? set type based component for both signup and sign in
+11. npm i axios 
+12. set cors in backend hono
+13. config.js set API
+14. clsx - npm module for merging styling classes className={`w-${size}`}
+15. create hooks folder 
+
