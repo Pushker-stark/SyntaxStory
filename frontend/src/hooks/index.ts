@@ -9,7 +9,6 @@ export interface Blog {
     "author": {
         "name": string
     }
-    "publishedDate":string
 }
 
 export const useBlog = ({id}:{id:string})=>{
@@ -17,7 +16,7 @@ export const useBlog = ({id}:{id:string})=>{
     const [blog, setBlog] = useState<Blog>();
 
     useEffect(() => {
-        const res = axios.get(`${BACKEND_URL}/api/v1/blog/${id}`, {
+        axios.get(`${BACKEND_URL}/api/v1/blog/${id}`, {
             headers: {
                 Authorization: localStorage.getItem("token")
             }
@@ -38,7 +37,7 @@ export const useBlogs = () => {
     const [blogs, setBlogs] = useState<Blog[]>([]);
 
     useEffect(() => {
-        const res = axios.get(`${BACKEND_URL}/api/v1/blog/bulk`, {
+        axios.get(`${BACKEND_URL}/api/v1/blog/bulk`, {
             headers: {
                 Authorization: localStorage.getItem("token")
             }

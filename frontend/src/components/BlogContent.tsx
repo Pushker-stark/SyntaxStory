@@ -1,4 +1,3 @@
-import { Blog } from "../hooks"
 import Appbar from "./Appbar"
 import { Avatar } from "./BlogCard"
 

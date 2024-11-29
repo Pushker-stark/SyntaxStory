@@ -7,10 +7,10 @@ import axios from "axios";
 export default function Auth({ type }: { type: "signup" | "signin" }) {
     const [blogInputs, setBlogInputs] = useState<SignupInput>({
         name: "",
-        username: "",
+        email: "",
         password: "",
     });
-
+    // console.log(BACKEND_URL);
     const navigate = useNavigate();
 
     async function sendRequest() {
@@ -19,7 +19,7 @@ export default function Auth({ type }: { type: "signup" | "signin" }) {
 
             const jwt = response.data;
             localStorage.setItem("token", jwt);
-            navigate("/blog");
+            navigate("/blogs");
         } catch (error) {
             alert("Invalid request!")
         }
@@ -51,7 +51,7 @@ export default function Auth({ type }: { type: "signup" | "signin" }) {
                             (e) => {
                                 setBlogInputs({
                                     ...blogInputs,
-                                    username: e.target.value
+                                    email: e.target.value
                                 })
                             }} />
                         <LabelledInput label="Password" type={"password"} placeholder="Enter your password" onChange={

@@ -22,5 +22,5 @@ Medium-Frontend
 14. clsx - npm module for merging styling classes className={`w-${size}`}
 15. create hooks folder create custom hooks
 16. useParams
-17.
+17. update the reinstall npm pndev common module to fix zod error.
 

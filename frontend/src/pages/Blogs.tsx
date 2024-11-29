@@ -34,7 +34,7 @@ export default function Blogs() {
           authorName={blog.author.name || "Anonymous"}
           title={blog.title}
           content={blog.content}
-          publishedDate={blog.publishedDate}
+          publishedDate="27 November 2024"
         />
         )}
 
