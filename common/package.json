@@ -1,6 +1,6 @@
 {
   "name": "@pndevs/medium-common",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This is a module for zod validation of medium-blog website",
   "main": "dist/index.js",
   "devDependencies": {},

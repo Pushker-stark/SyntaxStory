@@ -10,5 +10,6 @@ Welcome to the Common module as zod monorepo that helps to connect the zod type 
 8. npx tsc -b
 9. the d.ts file is also generated
 10. create .npmignore file add src in that makesure the name of module is prefix with your npm user acount.
-11. npm publish
+11. npm publish --access public
 12. now i can install : npm i @pndevs/medium-common in backend
+13. on updating the package make sure to change the version before publishing.

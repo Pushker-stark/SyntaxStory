@@ -14,22 +14,23 @@ const app = new Hono<{
   }
 }>();
 
-app.use(
-  '/',
-  cors({
-    origin: '*', // Change to your frontend origin for production
-    allowMethods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowHeaders: ['Content-Type', 'Authorization'],
-  })
-);
+app.use('/*',cors());
+// app.use(
+//   '/',
+//   cors({
+//     origin: '*', // Change to your frontend origin for production
+//     allowMethods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+//     allowHeaders: ['Content-Type', 'Authorization'],
+//   })
+// );
 
 // Explicitly handle OPTIONS requests globally
-app.options('*', (c) => {
-  c.header('Access-Control-Allow-Origin', '*');
-  c.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-  c.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  return c.text('OK');
-});
+// app.options('*', (c) => {
+//   c.header('Access-Control-Allow-Origin', '*');
+//   c.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+//   c.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+//   return c.text('OK');
+// });
 
 
 app.route("/api/v1/user", userRouter);

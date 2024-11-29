@@ -54,3 +54,4 @@ Backend
 47. So we created common folder to store zod usable data
 48. npm i @pndevs/medium-common -> npm module created by me and it can access by any frontedn backend now
 49. import it in for zod validation and try catch error for beeter safer.
+50. Before pushing it to the github makesure wrangle toml dburl and secret key is not exposed.
