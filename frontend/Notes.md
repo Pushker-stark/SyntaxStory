@@ -37,3 +37,4 @@ Medium-Frontend
   }```
   
 24.npx serve -s dist just on the same location.
+25. in order to deploy must check in viteconfig add this -> base: './',

@@ -6,7 +6,7 @@ import Blogs  from "./pages/Blogs";
 import Publish  from './pages/Publish';
 
 function App() {
-  console.log(import.meta.env.VITE_API_URL);
+  // console.log(import.meta.env.VITE_API_URL);
   return (
     <>
       <BrowserRouter>
