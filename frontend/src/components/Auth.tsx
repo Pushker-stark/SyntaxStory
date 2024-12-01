@@ -5,20 +5,20 @@ import { BACKEND_URL } from "../config";
 import axios from "axios";
 
 export default function Auth({ type }: { type: "signup" | "signin" }) {
+    const navigate = useNavigate();
     const [blogInputs, setBlogInputs] = useState<SignupInput>({
         name: "",
         email: "",
         password: "",
     });
     // console.log(BACKEND_URL);
-    const navigate = useNavigate();
 
     async function sendRequest() {
         try {
             const response = await axios.post(`${BACKEND_URL}/api/v1/user/${type === "signup" ? "signup" : "signin"}`, blogInputs);
 
-            const jwt = response.data;
-            localStorage.setItem("token", jwt);
+            const token = response.data;
+            localStorage.setItem("token", token.jwt);
             navigate("/blogs");
         } catch (error) {
             alert("Invalid request!")
@@ -33,7 +33,7 @@ export default function Auth({ type }: { type: "signup" | "signin" }) {
                         <div className="text-3xl font-extrabold  ">
                             Create an account
                         </div>
-                        <div className="text-slate-400 font-semibold ">
+                        <div className="text-slate-500 font-semibold ">
                             {type === "signin" ? "Don't have  an account?" : "Already have an account?"} <Link className="pl-2 underline" to={type === "signin" ? "/signup" : "/signin"}>
                                 {type === "signin" ? "Sign up" : "Sign in"}
                             </Link>

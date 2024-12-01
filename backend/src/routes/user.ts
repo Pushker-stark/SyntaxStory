@@ -77,7 +77,6 @@ userRouter.post('/signin', async (c) => {
             where: {
                 email: body.email,
                 password: body.password,
-                name: body.name,
             }
         });
     

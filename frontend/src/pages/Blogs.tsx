@@ -30,14 +30,13 @@ export default function Blogs() {
     <div className="flex justify-center">
       <div className="w-2/3">
         {blogs.map(blog => <BlogCard
+          key={blog.id}
           id={blog.id}
           authorName={blog.author.name || "Anonymous"}
           title={blog.title}
           content={blog.content}
-          publishedDate="27 November 2024"
-        />
-        )}
-
+          publishedDate={"27 November 2024"}
+        />)}
       </div>
     </div>
   </div>

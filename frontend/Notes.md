@@ -23,4 +23,17 @@ Medium-Frontend
 15. create hooks folder create custom hooks
 16. useParams
 17. update the reinstall npm pndev common module to fix zod error.
-
+18. make sure to save the jwt token in local storage as string not inform of object json -> chalenge found in this project
+19. Error - signin route not working, blogs are not fetching. 
+20. sigin payload backend problem and Beare+ " " space problem.
+21. Fix environment variable for backend by naming it with prefix VITE_apiname=put the url without in quotes to use in Vite 
+22. and import it via import.meta.env.VITE_API_URL to any file 
+23. for typescript in src/vite-env.d.ts configure the types and then we can use it ```interface ImportMetaEnv {
+    readonly VITE_API_URL : string;
+  }
+  
+  interface ImportMeta {
+    readonly env: ImportMetaEnv;
+  }```
+  
+24.npx serve -s dist just on the same location.
